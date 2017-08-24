@@ -8,6 +8,13 @@
                 "description": "Name of the Virtual Machine"
             }
         },
+        "vmSize": {
+              "type": "string",
+              "defaultValue": "Standard_D2",
+              "metadata": {
+              "description": "Size of VM"
+            }
+    },
         "keyVaultResourceID": {
             "type": "string",
             "metadata": {
