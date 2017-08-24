@@ -70,7 +70,7 @@
     "extensionVersion": "1.1",
     "encryptionOperation": "EnableEncryption",
     "keyEncryptionAlgorithm": "RSA-OAEP",
-    "updateVmUrl": "[concat('https://raw.githubusercontent.com/tylormerck/azure-automation/master/updatevm-',parameters('useExistingKek'),'.json')]",
+    "updateVmUrl": "[concat('https://raw.githubusercontent.com/tylormerck/azure-automation/master/disk-encryption/updatevm-',parameters('useExistingKek'),'.json')]",
     "keyVaultURL": "[concat('https://', parameters('keyVaultName'), '.vault.azure.net/')]",
     "keyVaultResourceID": "[concat(subscription().id,'/resourceGroups/',parameters('keyVaultResourceGroup'),'/providers/Microsoft.KeyVault/vaults/', parameters('keyVaultName'))]"
   },
