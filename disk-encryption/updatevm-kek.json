@@ -41,26 +41,29 @@
             "type": "Microsoft.Compute/virtualMachines",
             "name": "[parameters('vmName')]",
             "location": "[resourceGroup().location]",
-            "properties": {
-                "storageProfile": {
-                    "osDisk": {
-                        "encryptionSettings": {
-                            "diskEncryptionKey": {
-                                "sourceVault": {
-                                    "id": "[parameters('keyVaultResourceID')]"
-                                },
-                                "secretUrl": "[parameters('keyVaultSecretUrl')]"
-                            },
-                            "keyEncryptionKey": {
-                                "sourceVault": {
-                                    "id": "[parameters('keyVaultResourceID')]"
-                                },
-                                "keyUrl": "[parameters('keyEncryptionKeyURL')]"
-                            }
-                        }
-                    }
+          "properties": {
+            "hardwareProfile": {
+              "vmSize": "[parameters('vmSize')]"
+            },
+            "storageProfile": {
+              "osDisk": {
+                "encryptionSettings": {
+                  "diskEncryptionKey": {
+                    "sourceVault": {
+                      "id": "[parameters('keyVaultResourceID')]"
+                    },
+                    "secretUrl": "[parameters('keyVaultSecretUrl')]"
+                  },
+                  "keyEncryptionKey": {
+                    "sourceVault": {
+                      "id": "[parameters('keyVaultResourceID')]"
+                    },
+                    "keyUrl": "[parameters('keyEncryptionKeyURL')]"
+                  }
                 }
+              }
             }
+          }
         }
     ]
 }
